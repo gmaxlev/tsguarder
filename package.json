@@ -10,6 +10,7 @@
   "scripts": {
     "test": "npm run prettier && npm run lint && node --experimental-vm-modules node_modules/jest/bin/jest.js . --verbose",
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js . --watch --verbose",
+    "dev": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/index.ts",
     "build:dts": "tsc --declaration --emitDeclarationOnly -p . --outDir dts",
     "build": "rm -rf lib && rm -rf dts && npm run build:dts && rollup -c rollup.config.cjs --bundleConfigAsCjs && rm -rf dts",
     "lint": "eslint .",
