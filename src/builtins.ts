@@ -2,48 +2,48 @@ import type { TypeGuard } from "./types";
 import { createTypeGuard } from "./lib";
 
 export const isNumber: TypeGuard<number> = createTypeGuard(
-  "A value must be a number",
+  "must be a number",
   (value: unknown): value is number => typeof value === "number"
 );
 
 export const isBigInt: TypeGuard<bigint> = createTypeGuard(
-  "A value must be a bigint",
+  "must be a bigint",
   (value: unknown): value is bigint => typeof value === "bigint"
 );
 
 export const isString: TypeGuard<string> = createTypeGuard(
-  "A value must be a string",
+  "must be a string",
   (value: unknown): value is string => typeof value === "string"
 );
 
 export const isBoolean: TypeGuard<boolean> = createTypeGuard(
-  "A value must be boolean",
+  "must be boolean",
   (value: unknown): value is boolean => typeof value === "boolean"
 );
 
 export const isNull: TypeGuard<null> = createTypeGuard(
-  "A value must be null",
+  "must be null",
   (value: unknown): value is null => value === null
 );
 
 export const isUndefined: TypeGuard<undefined> = createTypeGuard(
-  "A value must be undefined",
+  "must be undefined",
   (value: unknown): value is undefined => typeof value === "undefined"
 );
 
 export const isSymbol: TypeGuard<symbol> = createTypeGuard(
-  "A value must be symbol",
+  "must be a symbol",
   (value: unknown): value is symbol => typeof value === "symbol"
 );
 
 export const isObject: TypeGuard<object> = createTypeGuard(
-  "A value must be an object",
+  "must be an object",
   (value: unknown): value is object => typeof value === "object"
 );
 
 export const isRecord: TypeGuard<Record<PropertyKey, unknown>> =
   createTypeGuard(
-    "A value must be a record",
+    "must be a record",
     (value: unknown): value is Record<PropertyKey, unknown> => {
       return (
         typeof value === "object" && value !== null && !Array.isArray(value)
@@ -52,6 +52,6 @@ export const isRecord: TypeGuard<Record<PropertyKey, unknown>> =
   );
 
 export const isFunction: TypeGuard<Function> = createTypeGuard(
-  "A value must be a function",
+  "must be a function",
   (value: unknown): value is Function => typeof value === "function"
 );
