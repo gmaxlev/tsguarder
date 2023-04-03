@@ -1,7 +1,19 @@
 {
   "name": "tsguarder",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A simple tool for creating TypeScript guards including assertions",
+  "keywords": [
+    "typescript",
+    "guards",
+    "assertions",
+    "validation"
+  ],
+  "homepage": "https://github.com/gmaxlev/tsguarder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmaxlev/tsguarder.git"
+  },
+  "bugs": "https://github.com/gmaxlev/tsguarder/issues",
   "main": "./lib/index.js",
   "module": "./lib/index.esm.js",
   "types": "./lib/index.d.ts",
