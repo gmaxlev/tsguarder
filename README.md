@@ -30,12 +30,10 @@ Use as a **type guard**:
 ```ts
 function doSomething(value: number | string) {
   if (isPositiveNumber(value)) {
+    // do something with a number
     const result = value.toFixed(2);
-    // do something
-  } else {
-    const result = value.startsWith("Hello");
-    // do something
   }
+  // do something with a number or a string
 }
 ```
 
