@@ -10,4 +10,5 @@ export {
   isBigInt,
   isFunction,
   isObject,
+  isArray,
 } from "./builtins";

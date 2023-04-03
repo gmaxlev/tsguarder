@@ -55,3 +55,8 @@ export const isFunction: TypeGuard<Function> = createTypeGuard(
   "must be a function",
   (value: unknown): value is Function => typeof value === "function"
 );
+
+export const isArray: TypeGuard<unknown[]> = createTypeGuard(
+  "must be an array",
+  (value: unknown): value is unknown[] => Array.isArray(value)
+);

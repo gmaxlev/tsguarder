@@ -1,5 +1,6 @@
 import {
   EXCLUDE_TYPES,
+  NOT_ARRAY_TYPES,
   NOT_BIGINT_TYPES,
   NOT_BOOLEAN_TYPES,
   NOT_FUNCTION_TYPES,
@@ -21,6 +22,7 @@ import {
   isObject,
   isRecord,
   isFunction,
+  isArray,
 } from "../src/builtins";
 
 describe("builtins.ts", () => {
@@ -222,6 +224,27 @@ describe("builtins.ts", () => {
       for (const notFunction of NOT_FUNCTION_TYPES) {
         const act = () => isFunction.assert(notFunction);
         expect(act).toThrowError("value: must be a function");
+      }
+    });
+  });
+
+  describe("isArray()", () => {
+    test("Should return true if a value is an array", () => {
+      const result = isArray([]);
+      expect(result).toBe(true);
+    });
+
+    test("Should return false if a value is not an array", () => {
+      for (const notArray of NOT_ARRAY_TYPES) {
+        const result = isArray(notArray);
+        expect(result).toBe(false);
+      }
+    });
+
+    test("Should throw the correct error if the assertion fails", () => {
+      for (const notArray of NOT_ARRAY_TYPES) {
+        const act = () => isArray.assert(notArray);
+        expect(act).toThrowError("value: must be an array");
       }
     });
   });
