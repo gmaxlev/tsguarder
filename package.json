@@ -4,6 +4,7 @@
   "description": "",
   "main": "./lib/index.js",
   "module": "./lib/index.esm.js",
+  "type": "module",
   "types": "./lib/index.d.ts",
   "author": "Maksym Levytskyi https://github.com/gmaxlev",
   "license": "MIT",

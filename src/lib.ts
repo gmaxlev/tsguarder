@@ -47,9 +47,9 @@ export function createTypeGuard<T>(
     name?: string
   ): asserts value is T {
     if (!guarder(value)) {
-      const typeDescription =
-        normalizedDescription || `Type guard failed: ${normalizedGuard.name}`;
-      const message = name ? `${name}: ${typeDescription}` : typeDescription;
+      const typeDescription = normalizedDescription || normalizedGuard.name;
+      const nameNormalized = name ? name : "value";
+      const message = `${nameNormalized}: ${typeDescription}`;
       throw new TypeError(message);
     }
   };
