@@ -11,4 +11,5 @@ export {
   isFunction,
   isObject,
   isArray,
+  isRecord,
 } from "./builtins";
