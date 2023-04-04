@@ -1,6 +1,6 @@
 {
   "name": "tsguarder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple tool for creating TypeScript guards including assertions",
   "keywords": [
     "typescript",
